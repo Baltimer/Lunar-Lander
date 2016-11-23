@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Lunar Lander Jandro</title>
+<link rel="stylesheet" href="css/vertical.css">
+</head>
+
+<body>
+<div id="instrucciones">
+    <h1>Instrucciones</h1>
+    <p>Para darle potencia a la nave tan solo presiona la barra espaciadora.
+        Deberás llegar a la superficie lunar con una velocidad que no supere
+        los 10 km/h, sino se estrellará.<br><br>
+        Vigila tu nivel de Fuel, sino caerás sin remedio al abismo.</p>
+    <a href="#" onclick="ocultarInstrucciones();"><img src="img/cancel.png" alt="cancel"></a>
+</div>
+<div class="contenedor">
+    <div class="izquierda">
+        <div class="menuDatos">
+            <img src="img/Velocity.png" alt="Velocity"><br id="brVertical"> <span id="espaciado2">57 Km/h</span><br>
+            <img src="img/Height.png" alt="Height"><br id="brVertical"> <span id="espaciado2">1427 m</span><br>
+            <img src="img/Fuel.png" alt="Fuel"><br id="brVertical"> <span id="espaciado1"> 87 %</span>
+        </div>
+    </div>
+    <div class="centro">
+        <img src="img/Cohete.png" alt="Cohete">
+    </div>
+    <div class="derecha">
+        <div class="menuOpciones">
+            <a id="pausa" href="#" onclick="mostrarInstrucciones();"><img id="imgOpciones" src="img/Pausa.png" alt="Pausa"></a>
+            <a id="play" href="#" onclick="ocultarInstrucciones();"><img id="imgOpciones" src="img/Play.png" alt="Play"></a>
+        </div>
+        <a href="about.html"><img id="about" src="img/About.png" alt="About" usemap="about"></a>
+    </div>
+</div>
+
+<div class="luna"></div>
+<script> function mostrarInstrucciones() {document.getElementById("instrucciones").style.display="block";
+                                            document.getElementById("pausa").style.display="none";
+                                            document.getElementById("play").style.display="inline";}
+</script>
+<script> function ocultarInstrucciones() {document.getElementById("instrucciones").style.display="none";
+                                            document.getElementById("play").style.display="none";
+                                            document.getElementById("pausa").style.display="inline";}
+</script>
+</body>
+</html> 
